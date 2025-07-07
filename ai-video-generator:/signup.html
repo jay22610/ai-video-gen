@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Sign Up – AI Video Studio</title>
-  <script src="https://cdn.tailwindcss.com "></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
@@ -35,7 +35,19 @@
 
   <!-- Footer -->
   <footer class="text-center text-sm text-gray-500 pb-10">
-    &copy; {new Date().getFullYear()} AI Video Studio • All rights reserved
+    &copy; <span id="year"></span> AI Video Studio • All rights reserved
   </footer>
+  <script>
+    function signUp() {
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value.trim();
+      if (!email || !password) {
+        alert('Please provide an email and password');
+        return;
+      }
+      alert('Account created successfully!');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>

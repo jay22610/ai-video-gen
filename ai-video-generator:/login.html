@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Login – AI Video Studio</title>
-  <script src="https://cdn.tailwindcss.com "></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
@@ -34,7 +34,10 @@
 
   <!-- Footer -->
   <footer class="text-center text-sm text-gray-500 pb-10">
-    &copy; {new Date().getFullYear()} AI Video Studio • All rights reserved
+    &copy; <span id="year"></span> AI Video Studio • All rights reserved
   </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
