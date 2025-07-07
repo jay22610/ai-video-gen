@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <title>Pricing – AI Video Studio</title>
-  <script src="https://cdn.tailwindcss.com "></script>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800 antialiased">
 
@@ -160,7 +160,10 @@
 
   <!-- Footer -->
   <footer class="py-10 px-6 md:px-10 bg-white border-t text-center text-gray-500 mt-16">
-    &copy; {new Date().getFullYear()} AI Video Studio • All rights reserved
+    &copy; <span id="year"></span> AI Video Studio • All rights reserved
   </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
